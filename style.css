@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;1,200&family=Merienda:wght@400;700&family=Montserrat+Alternates:ital,wght@0,100;0,400;1,300&family=Poppins:ital,wght@0,100;0,200;1,100;1,200;1,300&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+}
+body{
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(127, 216, 216);
+}
+header:hover{
+    background-color: #fff;
+}
+.overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    display:flex;
+    flex-wrap:nowrap;
+    z-index:999;
+}
+.overlay div{
+    width: 100%;
+    background-color: #ffe5b4;
+    transform-origin: left;
+}
+.overlay div:nth-child(1){
+    background-color: #9bd9ee;
+}
+.overlay div:nth-child(2){
+    background-color: #f5be9a;
+}
+.overlay div:nth-child(3){
+    background-color: #a1a1a1;
+}
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    transition: all ease 0.5s;
+    z-index: 999;
+}
+header ul li{
+    display: inline-block;
+    margin:0 15px;
+}
+header ul li a{
+    text-decoration: none;
+    color:#000;
+    transition:  all ease 0.5s;
+}
+header ul li a:hover{
+    opacity:0.5;
+}
+.megamenu{
+    position: absolute;
+    left:0;
+    top:44px;
+    background-color: #fff;
+    width: 100%;
+    padding:30px 100px;
+    display: none;
+}
+
+header ul li:hover .megamenu{
+    display: block;
+}
+.megamenu ul li{
+    width:100%;
+    margin-bottom: 5px;
+}
+.megamenu ul li a span {
+font-size: 18px;
+opacity: 0;
+transition: all ease 0.5s;
+}
+.megamenu ul li a:hover span{
+    opacity:1;
+}
+
+.content{
+    display:flex;
+    flex-wrap: nowrap;
+    height:100vh;
+}
+.content .item {
+    position:relative;
+    width: 100%;
+    overflow: hidden;
+    transition: all ease 1s;
+}
+.content .item img{
+    width:100%;
+    height:100vh;
+    object-fit: cover;
+}
+.content .item:hover{
+    width: 200%;
+}
+.content .item .text{
+    position: absolute;
+    left:0;
+    bottom: -50px;
+    width: 100%;
+    height:100%;
+    padding:50px 50px 100px;
+    color:#fff;
+    display: flex;
+    align-items: flex-end;
+    opacity:0;
+    transition: all ease 0.5s 0.2s;
+    background-image: linear-gradient(to bottom,rgb(0 0 0 /40%));
+}
+.content .item:hover .text{
+    opacity:1;
+    bottom:0;
+}
+.content .item .text h3{
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.content .item .text h3:hover{
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 5px;
+    color:rgb(226, 151, 12);
+}
+.content .item .text a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+.content .item .text a span{
+    font-size: 20px;
+    display: inline-block;
+    transition: all ease 2s;
+}
+.content .item .text a:hover span{
+    transform:rotate(360deg);
+}
